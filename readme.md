@@ -12,6 +12,43 @@
 ## 主要功能
 ### 参考工程
 AndroidViewInjectTest
+### 安装工程到本地
+这是一个maven工程,使用maven将工程安装到本地
+### 添加依赖
+在build.gradle中添加mavenLocal()
+```
+buildscript {
+
+  repositories {
+    mavenLocal()
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.1.3'
+
+    // NOTE: Do not place your application dependencies here; they belong
+    // in the individual module build.gradle files
+  }
+}
+
+allprojects {
+  repositories {
+    mavenLocal()
+    google()
+    jcenter()
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+```
+添加构件
+```
+  implementation 'com.litongjava:android-view-inject:1.0'
+```
 ### 整合Activity
 * @FindViewByIdLayout 查找布局文件并注入到当前Activity,用于替换setContentView
 * @FindViewById 查看控件id,注入到成员变量

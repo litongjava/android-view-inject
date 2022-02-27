@@ -9,9 +9,9 @@
 显而可见，这些第三方，不仅仅有注解功能，还有联网，请求数据库等等其它很多功能，
 而我们只需要一个注解功能，这不等于，我需要一个苹果，你一下给了我一车水果，无形中增加了内存的容量
 其实说的通俗点就是，第三方很多冗余的代码，会占去我们的内存，基于这样的一个原因，不就是一个注解功能吗，我们何不自己实现呢?
-## 参考工程
-AndroidViewInjectTest
 ## 主要功能
+### 参考工程
+AndroidViewInjectTest
 ### 整合Activity
 * @FindViewByIdLayout 查找布局文件并注入到当前Activity,用于替换setContentView
 * @FindViewById 查看控件id,注入到成员变量

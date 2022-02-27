@@ -19,6 +19,8 @@ public class MInvocationHandler implements InvocationHandler {
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
     // 调用用户自定义方法的点击事件
     // 调用button的onClick方法,不需要传入参数
-    return this.method.invoke(target);
+    //return this.method.invoke(target);
+    //调用button的onClick方法,需要传入参数
+    return this.method.invoke(target,args);
   }
 }

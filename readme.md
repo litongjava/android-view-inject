@@ -47,7 +47,7 @@ task clean(type: Delete) {
 ```
 添加构件
 ```
-  implementation 'com.litongjava:android-view-inject:1.0'
+  implementation 'com.litongjava:android-view-inject:1.0.1'
 ```
 ### 整合Activity
 * @FindViewByIdLayout 查找布局文件并注入到当前Activity,用于替换setContentView

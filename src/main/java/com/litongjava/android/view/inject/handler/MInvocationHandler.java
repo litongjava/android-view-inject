@@ -21,6 +21,13 @@ public class MInvocationHandler implements InvocationHandler {
     // 调用button的onClick方法,不需要传入参数
     //return this.method.invoke(target);
     //调用button的onClick方法,需要传入参数
-    return this.method.invoke(target,args);
+    //return this.method.invoke(target,args);
+    //判断method中是否存在参数,如果存在,则传入args
+    int parameterCount = method.getParameterCount();
+    if(parameterCount>0) {
+      return this.method.invoke(target,args);
+    }else {
+      return this.method.invoke(target);
+    }
   }
 }
